@@ -15,8 +15,8 @@ function App() {
     },
     {
       date: new Date(2022, 10, 15),
-      description: 'Ноутбук',
-      amount: 111450,
+      description: 'Пиджак',
+      amount: 3999,
     },
   ]
 
@@ -27,17 +27,17 @@ function App() {
         date={costs[0].date}
         description={costs[0].description}
         amount={costs[0].amount}
-      ></CostItem>
+      />
       <CostItem 
         date={costs[1].date}
         description={costs[1].description}
         amount={costs[1].amount}
-      ></CostItem>
+      />
       <CostItem 
         date={costs[2].date}
         description={costs[2].description}
         amount={costs[2].amount}
-      ></CostItem>
+      />
     </div>
   );
 }
