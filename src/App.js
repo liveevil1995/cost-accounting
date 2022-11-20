@@ -5,26 +5,34 @@ const App = () => {
 
   const costs = [
     {
+      id: 'c1',
       date: new Date(2022, 2, 12),
       description: 'Холодильник',
       amount: 450,
     },
     {
+      id: 'c2',
       date: new Date(2022, 5, 25),
       description: 'Ноутбук',
       amount: 111450,
     },
     {
+      id: 'c3',
       date: new Date(2022, 10, 15),
       description: 'Пиджак',
       amount: 3999,
     },
   ]
 
+  const addCostHandler = (cost) => {
+    console.log(cost);
+    console.log('App Component');
+  }
+
   return (
     <div>
       <h1>Учет расходов</h1>
-      <NewCost></NewCost>
+      <NewCost onAddCost={addCostHandler}/>
       <Costs costs={costs}/>
     </div>
   );
